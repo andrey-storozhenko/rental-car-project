@@ -1,7 +1,7 @@
 
 import type { Car } from "@/types/car";
 import { useRouter } from 'next/navigation';
-
+import css from "./CarCard.module.css"
 interface CarCardProps{
   car: Car;
   
@@ -15,6 +15,7 @@ export default function CarCard({ car }: CarCardProps) {
   }
   return (
     <div>
+      <img className={css.image} src={car.img} alt="car" />
       <div>
         <h2>{car.id}</h2>
         <p>{car.brand} {car.model} {car.year}</p>
