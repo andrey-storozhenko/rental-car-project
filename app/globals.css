@@ -3,3 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container{
+    width: 1440px;
+    padding: 0 120px;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+
+h1,h2,h3,h4,p,a{
+    font-family: "Manrope", sans-serif;
+}
+
+.blueMark{
+    color:#3470FF;
+}

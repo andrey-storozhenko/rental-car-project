@@ -1,7 +1,38 @@
-.container{
-    background-image: url('../public/images/hero-image.jpg');
-    height: 100vh;
+.hero{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('../public/images/hero-image.jpg');
+    height: 700;
     width: 100%;
     background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.heroContent{
+    margin-top: 440px;
+    text-align: center;
+}
+.heroTitle{
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.2;
+    text-align: center;
+    color:#FFFFFF;
+}
+.heroText{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33333;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 16px;
+}
+.heroButton{
+    padding: 12px 99px;
+    background-color: #3470FF;
+    border-radius: 12px;
+    border: 0px;
+    color:#FFFFFF;
+    margin-top: 40px;
 }
