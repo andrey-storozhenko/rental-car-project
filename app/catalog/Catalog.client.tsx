@@ -5,6 +5,7 @@ import { getCars, getFilters } from "@/services/carService";
 import CarList from "@/components/CardList/CardList";
 import { Car } from "@/types/car";
 import FiltersSearch from "@/components/FiltersSearch/FiltersSearch";
+import css from "./page.module.css";
 
 
 export default function CatalogClient() {
@@ -58,7 +59,7 @@ export default function CatalogClient() {
     });
 
     return (
-        <div>
+        <div className={css.catalog}>
             <FiltersSearch brands={filtersData?.brands ?? []} filters={filters} priceRange={filtersData?.price ?? {min:0,max:0}} setFilters={setFilters} onSearch={handleSearch}></FiltersSearch>
             <CarList cars={cars}></CarList>
 

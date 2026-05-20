@@ -6,6 +6,7 @@
 .container{
     width: 1440px;
     padding: 0 120px;
+    margin: 0 auto;
 }
 
 a{
@@ -22,3 +23,4 @@ h1,h2,h3,h4,p,a{
 .blueMark{
     color:#3470FF;
 }
+

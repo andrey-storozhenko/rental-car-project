@@ -1,5 +1,6 @@
 import type { Car } from "@/types/car.ts";
 import CarCard from "../CarCard/CarCard";
+import css from "./CarList.module.css";
 
 interface CarListProps{
     cars: Car[];
@@ -7,10 +8,10 @@ interface CarListProps{
 
 export default function CarList({cars}:CarListProps) {
     return (
-    <div>
+    <ul className={css.carList}>
       {cars.map((car) => (
         <CarCard key={car.id} car={car} />
       ))}
-    </div>
+    </ul>
   );
 }

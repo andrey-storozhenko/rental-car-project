@@ -14,23 +14,22 @@ export default function CarCard({ car }: CarCardProps) {
     router.push(`/catalog/${car.id}`)
   }
   return (
-    <div>
+    <li className={css.carCard}>
       <img className={css.image} src={car.img} alt="car" />
-      <div>
-        <h2>{car.id}</h2>
-        <p>{car.brand} {car.model} {car.year}</p>
-        <p>${car.rentalPrice}</p>
+      <div className={css.carInfo}>
+        <p className={css.carInfoText}>{car.brand} <span className="blueMark">{car.model}</span>, {car.year}</p>
+        <p className={css.carInfoPrice}>${car.rentalPrice}</p>
       </div>
-      <div>
-        <p>{car.location.city}</p>
-        <p>{car.location.country}</p>
-        <p>{car.rentalCompany}</p>
+      <div className={css.carLocation}>
+        <p className={css.carLocationCity}>{car.location.city}</p>
+        <p className={css.carLocationCountry}>{car.location.country}</p>
+        <p className={css.carCompany}>{car.rentalCompany}</p>
       </div>
-      <div>
-        <p>{car.type}</p>
-        <p>{car.mileage} km</p>
+      <div className={css.carMileage}>
+        <p className={css.carType}>{car.type}</p>
+        <p className={css.carMileageInfo}>{car.mileage} km</p>
       </div>
-      <button onClick={handleDetailsButton}>Read more</button>
-    </div>
+      <button onClick={handleDetailsButton} className={css.buttonDetails}>Read more</button>
+    </li>
   );
 }
